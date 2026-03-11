@@ -12,10 +12,7 @@ def fetch_and_parse(url: str):
         A BeautifulSoup object representing the parsed HTML.
     """
     response = requests.get(url)
-    response.raise_for_status()  # raise an error for bad status codes
 
-    # parse the page with BeautifulSoup
-    soup = BeautifulSoup(response.text, "html.parser")
     return soup
 
 
